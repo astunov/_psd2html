@@ -1,0 +1,105 @@
+/*********************************
+** GRID
+**
+** STRUCTURE
+** CLASSIC BOOTSTRAP 12 COLUMNS GRID
+**
+*********************************/
+
+.container
+{
+    box-sizing: border-box;
+    min-width: 1000px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include clearfix();
+}
+
+
+.row
+{
+    box-sizing: border-box;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    @include clearfix();
+    &--table
+    {
+        display: table;
+
+        width: 100%;
+        margin: 0;
+        [class*='col-']
+        {
+            display: table-cell;
+            float: none;
+
+            vertical-align: top;
+        }
+    }
+    &--border
+    {
+        [class*='col-']:not(:last-of-type)
+        {
+            border-right: 1px solid #efefef;
+        }
+    }
+}
+
+.col
+{
+    position: relative;
+
+    float: left;
+
+    box-sizing: border-box;
+    min-height: 1px;
+    padding: 0 10px;
+    &-2
+    {
+        width: 16.6666%;
+    }
+    &-3
+    {
+        width: 25%;
+    }
+    &-4
+    {
+        width: 33.3333%;
+    }
+    &-5
+    {
+        width: 41.66666%;
+    }
+    &-6
+    {
+        width: 50%;
+    }
+    &-7
+    {
+        width: 58.3333%;
+    }
+    &-8
+    {
+        width: 66.6666%;
+    }
+    &-9
+    {
+        width: 75%;
+    }
+    &-12
+    {
+        width: 100%;
+    }
+    // 1/8
+    &-1_8
+    {
+        width: 12.5%;
+    }
+    &-1_5
+    {
+        width: 20%;
+    }
+}
